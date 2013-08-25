@@ -5,6 +5,7 @@ angular.module('hackreactorApp')
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
-      'Karma'
+      'Karma',
+      'Hack Reactor'
     ];
   }]);
