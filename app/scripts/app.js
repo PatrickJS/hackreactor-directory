@@ -5,7 +5,7 @@ angular.module('hackreactorApp', ['ngRoute'])
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'DirectoryCtrl'
       })
       .otherwise({
         redirectTo: '/'
