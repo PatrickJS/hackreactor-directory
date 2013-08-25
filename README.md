@@ -1,5 +1,6 @@
-Hack Reactor Directory
-===========
+![Hack Reactor](https://dl.dropboxusercontent.com/u/7020515/HackReactor/logo.png)
+Student Directory
+===
 
 setup the app
 ```bash
