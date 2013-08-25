@@ -9,9 +9,18 @@ npm install -g generator-angular
 npm install
 bower update
 ```
-run the server
+run Server
 ```bash
 grunt server
 ```
+run Tests
+```bash
+grunt test
+```
+create Build
+```bash
+grunt
+```
+
 
 Copyright 2013, Hack Reactor, LLC. All rights reserved.
