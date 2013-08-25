@@ -6,5 +6,5 @@ angular.module('hackreactorApp')
 
 
     // Public API here
-    return directory.users;
+    return directory;
   });
