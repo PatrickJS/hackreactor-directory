@@ -5,17 +5,18 @@ angular.module('hackreactorApp')
     return {
       restrict: 'E',
       scope: {
-        search: "&"
       },
-      template: '<div class="navbar navbar-fixed-top">'+
+      template: '<div class="navbar navbar-inverse navbar-fixed-top">'+
                     '<div class="navbar-inner">'+
-                      '<div class="container">'+
-                        '<input ng-model="">'+
-                      '</div>'+
+                      '<a class="brand" href="#" target="_blank">'+
+                        '<img src="http://hackreactor.com/wp-content/uploads/2013/04/180px.png">'+
+                      '</a>'+
+                      '<ul class="nav pull-right">'+
+                        // '<li><input type="text"></li>'+
+                      '</ul>'+
                     '</div>'+
                 '</div>',
       link: function postLink(scope, element, attrs) {
-        element.text('this is the navbar directive');
       }
     };
   });

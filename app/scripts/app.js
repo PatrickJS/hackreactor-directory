@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hackreactorApp', ['ngRoute', 'ngResource', 'firebase'])
+angular.module('hackreactorApp', ['ngRoute', 'ngResource', 'ngAnimate'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {

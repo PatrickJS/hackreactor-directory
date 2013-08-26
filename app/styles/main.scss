@@ -5,28 +5,48 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 /* Put your CSS here */
 html, body {
-  margin: 20px;
+  margin: 30px 10px;
 }
-
+.navbar {
+  color: white;
+}
 body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
+.repeat-item.ng-enter,
+.repeat-item.ng-leave,
+.repeat-item.ng-move {
+  -webkit-transition: 0.2s linear all;
+  -moz-transition: 0.2s linear all;
+  -o-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+  position:relative;
 }
 
-.hero-unit h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+.repeat-item.ng-enter {
+  left:-10px;
+  opacity:0;
+}
+.repeat-item.ng-enter.ng-enter-active {
+  left:0;
+  opacity:1;
+}
+
+.repeat-item.ng-leave {
+  left:0;
+  opacity:1;
+}
+.repeat-item.ng-leave.ng-leave-active {
+  left:-10px;
+  opacity:0;
+}
+
+.repeat-item.ng-move {
+  opacity:0.5;
+}
+.repeat-item.ng-move.ng-move-active {
+  opacity:1;
 }
