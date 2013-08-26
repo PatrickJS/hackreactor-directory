@@ -7,6 +7,10 @@ angular.module('hackreactorApp', ['ngRoute', 'ngResource', 'ngAnimate'])
         templateUrl: 'views/main.html',
         controller: 'DirectoryCtrl'
       })
+      .when('/table', {
+        templateUrl: 'views/table.html',
+        controller: 'DirectoryCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
