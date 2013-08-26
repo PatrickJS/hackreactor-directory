@@ -8,10 +8,5 @@ angular.module('hackreactorApp')
         console.log('save' + person);
         $location.path('/');
       };
-      $scope.remove = function(person) {
-        var index = $scope.directory.indexOf(person);
-        $scope.directory.splice(index, 1);
-        $location.path('/');
-      };
     }
   ]);

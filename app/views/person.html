@@ -1,18 +1,41 @@
-{{ person.firstname }} {{ person.lastname }}
-<a href="https://github.com/{{ person.github }}" target="_blank">
-  {{ person.github }}
-</a>
-<a href="mailto:{{ person.email }}" target="_blank">
-  {{ person.email }}
-</a>
-{{ person.email2 }}
-{{ person.cellphone | phoneNumber }}
-<a href="{{ person.blog }}">
-  {{ person.blog }}
-</a>
-<a href="{{ person.projectlinks }}">
-  {{ person.projectlinks }}
-</a>
-{{ person.employer }}
+<h1>
+  {{ person.firstname }} {{ person.lastname }}
+</h1>
+<div ng-if="person.github">
+  <small>Github:</small>
+  <a href="https://github.com/{{ person.github }}" target="_blank">
+    {{ person.github }}
+  </a>
+</div>
+<div ng-if="person.email">
+  <small>Email:</small>
+  <a href="mailto:{{ person.email }}" target="_blank">
+    {{ person.email }}
+  </a>
+  <a href="mailto:{{ person.email2 }}" target="_blank">
+    {{ person.email2 }}
+  </a>
+</div>
+<div ng-if="person.cellphone">
+  <small>Phone Number:</small>
+  <a href="tel:{{ person.cellphone | phoneNumber }}">
+    {{ person.cellphone | phoneNumber }}
+  </a>
+</div>
+<div ng-if="person.blog">
+  <small>Blog:</small>
+  <a href="{{ person.blog }}">
+    {{ person.blog }}
+  </a>
+</div>
+<div ng-if="person.projectlinks">
+  <small>Projects</small>:
+  <a href="{{ person.projectlinks }}">
+    {{ person.projectlinks }}
+  </a>
+</div>
+<div ng-if="person.employer ">
+<small>Employer</small>: {{ person.employer }}
+</div>
 <button class="btn btn-mini btn-success" ng-click="save(person)">Save</button>
 <button class="btn btn-mini btn-danger" ng-click="remove(person)">Delete</button>
