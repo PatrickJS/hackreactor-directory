@@ -1,0 +1,18 @@
+{{ person.firstname }} {{ person.lastname }}
+<a href="https://github.com/{{ person.github }}" target="_blank">
+  {{ person.github }}
+</a>
+<a href="mailto:{{ person.email }}" target="_blank">
+  {{ person.email }}
+</a>
+{{ person.email2 }}
+{{ person.cellphone | phoneNumber }}
+<a href="{{ person.blog }}">
+  {{ person.blog }}
+</a>
+<a href="{{ person.projectlinks }}">
+  {{ person.projectlinks }}
+</a>
+{{ person.employer }}
+<button class="btn btn-mini btn-success" ng-click="save(person)">Save</button>
+<button class="btn btn-mini btn-danger" ng-click="remove(person)">Delete</button>
