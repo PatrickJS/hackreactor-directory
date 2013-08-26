@@ -1,17 +1,37 @@
 <directory></directory>
+<input class="form-control" type="text"
+       ng-model="searchText.$"
+       placeholder="Search" autofocus>
 
-<div ng-repeat="person in directory | filter:searchText"
-    class="repeat-item">
-    <div style="min-width:300px;">
-      <h4>
-        <a href="{{ personUrl(person) }}">
-         {{ person.firstname }} {{ person.lastname }}
-       </a>
-       <a href="{{ personEditUrl(person) }}" class="btn btn-xs btn-info">
-        Edit
-       </a>
-      </h4>
+<div ng-repeat="person in directory | filter:searchText" class="repeat-item">
+    <h4>
+      <a href="{{ personUrl(person) }}">
+       {{ person.firstname }} {{ person.lastname }}
+     </a>
+     <a href="{{ personEditUrl(person) }}" class="btn btn-xs btn-info">
+      Edit
+     </a>
+    </h4>
 
-    </div>
-
+    <a href="https://github.com/{{ person.github }}" target="_blank">
+      {{ person.github }}
+    </a>
+    <a href="mailto:{{ person.email }}" target="_blank">
+      {{ person.email }}
+    </a>
+    <a href="mailto:{{ person.email2 }}" target="_blank">
+      {{ person.email2 }}
+    </a>
+    <a href="tel:{{ person.cellphone }}" target="_blank">
+      {{ person.cellphone | phoneNumber }}
+    </a>
+    <a href="http://{{ person.blog }}" target="_blank">
+      {{ person.blog }}
+    </a>
+    <a href="http://{{ person.projectlinks }}" target="_blank">
+      {{ person.projectlinks }}
+    </a>
+    <a href="http://www.google.com/search?q={{ person.employer }}&btnI" target="_blank">
+      {{ person.employer }}
+    </a>
 </div>
