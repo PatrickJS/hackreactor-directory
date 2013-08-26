@@ -25,5 +25,6 @@
 <div>
   <small>Employer</small>: <input ng-model="person.employer">
 </div>
+<a href="{{ personUrl(person) }}" type="button" class="btn btn-default">Back</a>
 <button type="button" class="btn btn-success" ng-click="save(person)">Save</button>
 <button type="button" class="btn btn-danger" ng-click="remove(person)">Delete</button>

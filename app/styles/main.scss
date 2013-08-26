@@ -2,6 +2,24 @@ $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 @import "bootstrap-sass/lib/bootstrap";
+@mixin transition($property: all, $duration: 0.5s, $ms: false) {
+  -webkit-transition: $property $duration linear;
+  -moz-transition: $property $duration linear;
+  -o-transition: $property $duration linear;
+  @if ($ms) {
+    -ms-transition: $property $duration linear;
+  }
+  transition: $property $duration linear;
+}
+@mixin cubic-bezier($property: all, $duration: 0.5s, $ms: false) {
+  -webkit-transition: $property $duration cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  -moz-transition: $property $duration cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  -o-transition: $property $duration cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  @if ($ms) {
+    -ms-transition: $property $duration cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  }
+  transition: $property $duration cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
 
 /* Put your CSS here */
 html, body {
@@ -46,10 +64,7 @@ body {
 .repeat-item.ng-enter,
 .repeat-item.ng-leave,
 .repeat-item.ng-move {
-  -webkit-transition: 0.2s linear all;
-  -moz-transition: 0.2s linear all;
-  -o-transition: 0.2s linear all;
-  transition: 0.2s linear all;
+  @include transition(all, 0.2s);
   position:relative;
 }
 
@@ -81,10 +96,7 @@ body {
 .main-view.ng-enter,
 .main-view.ng-leave,
 .main-view.ng-move {
-  -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  -moz-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  -o-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  @include cubic-bezier(all, 0.5s);
   position: relative;
 }
 
@@ -107,7 +119,7 @@ body {
 }
 
 .main-view.ng-move {
-  opacity: 0.5;
+  opacity: 0;
 }
 .main-view.ng-move.ng-move-active {
   opacity: 1;

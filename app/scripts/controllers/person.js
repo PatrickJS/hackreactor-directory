@@ -6,7 +6,6 @@ hackreactor
       $scope.person = _.extend({}, $scope.directory[$routeParams.id]);
 
       $scope.save = function(person) {
-        console.log('save' + person);
         $scope.directory[$routeParams.id] = person;
         $location.path('/');
       };
