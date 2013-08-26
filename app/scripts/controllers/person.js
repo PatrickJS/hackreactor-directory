@@ -8,5 +8,11 @@ angular.module('hackreactorApp')
         console.log('save' + person);
         $location.path('/');
       };
+      $scope.gravatar = (function() {
+        var cache = {};
+        return function(email) {
+          return (cache[email]) ? cache[email] : cache[email] = 'http://www.gravatar.com/avatar/'+ $.md5(email.toLowerCase()) +'.jpg';
+        }
+      }());
     }
   ]);

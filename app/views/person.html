@@ -1,6 +1,7 @@
 <h1>
   {{ person.firstname }} {{ person.lastname }}
 </h1>
+<img ng-src="{{ gravatar(person.email) }}" ng-if="person.email">
 <div ng-if="person.github">
   <small>Github:</small>
   <a href="https://github.com/{{ person.github }}" target="_blank">
@@ -37,5 +38,5 @@
 <div ng-if="person.employer ">
 <small>Employer</small>: {{ person.employer }}
 </div>
-<button class="btn btn-mini btn-success" ng-click="save(person)">Save</button>
-<button class="btn btn-mini btn-danger" ng-click="remove(person)">Delete</button>
+<button type="button" class="btn btn-success" ng-click="save(person)">Save</button>
+<button type="button" class="btn btn-danger" ng-click="remove(person)">Delete</button>
