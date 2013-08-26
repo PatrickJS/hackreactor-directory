@@ -27,20 +27,20 @@ body {
 }
 
 .repeat-item.ng-enter {
-  left:-10px;
+  right:-50px;
   opacity:0;
 }
 .repeat-item.ng-enter.ng-enter-active {
-  left:0;
+  right:0;
   opacity:1;
 }
 
 .repeat-item.ng-leave {
-  left:0;
+  right:0;
   opacity:1;
 }
 .repeat-item.ng-leave.ng-leave-active {
-  left:-10px;
+  right:-50px;
   opacity:0;
 }
 
