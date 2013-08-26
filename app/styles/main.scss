@@ -6,16 +6,29 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 /* Put your CSS here */
 html, body {
   margin: 30px 10px;
+  & a {
+    color: #2874dc;
+  }
 }
 .navbar {
   color: white;
+  & img {
+    margin: 9px;
+    width: 96px;
+    height: 30px;
+  }
 }
 body {
-  background: #fafafa;
+  background: #2F3238;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  color: white;
 }
-
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #3C3F45;
+}
+.repeat-item {
+  padding: 5px;
+}
 .repeat-item.ng-enter,
 .repeat-item.ng-leave,
 .repeat-item.ng-move {

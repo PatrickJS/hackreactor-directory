@@ -1,6 +1,8 @@
 <directory></directory>
 
-<input type="text" ng-model="searchText.$">
+<input type="text"
+       ng-model="searchText.$"
+       autofocus>
 
   <div ng-repeat="person in directory | filter:searchText"
       class="repeat-item">
@@ -13,7 +15,11 @@
       </a>
       {{ person.email2 }}
       {{ person.cellphone | phoneNumber }}
-      {{ person.blog }}
-      {{ person.projects }}
+      <a href="{{ person.blog }}">
+        {{ person.blog }}
+      </a>
+      <a href="{{ person.projectlinks }}">
+        {{ person.projectlinks }}
+      </a>
       {{ person.employer }}
   </div>
