@@ -24,13 +24,13 @@
 </div>
 <div ng-if="person.blog">
   <small>Blog:</small>
-  <a href="http://{{ person.blog }}" target="_blank">
+  <a href="{{ person.blog }}" target="_blank">
     {{ person.blog }}
   </a>
 </div>
 <div ng-if="person.projectlinks">
   <small>Projects</small>:
-  <a href="http://{{ person.projectlinks }}" target="_blank">
+  <a href="{{ person.projectlinks }}" target="_blank">
     {{ person.projectlinks }}
   </a>
 </div>
