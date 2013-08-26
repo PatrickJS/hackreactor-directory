@@ -29,7 +29,8 @@
     <!-- Add your site or application content here -->
     <div ng-controller="MainCtrl">
       <navbar></navbar>
-      <ng-view class="repeat-item">
+      <input class="form-control" type="text" ng-model="searchText.$" placeholder="Search" autofocus>
+      <ng-view class="main-view">
     </div>
 
     <script src="_data.js"></script>

@@ -1,9 +1,5 @@
 <directory></directory>
 
-<input type="text"
-       ng-model="searchText.$"
-       autofocus>
-
 <div ng-repeat="person in directory | filter:searchText"
     class="repeat-item">
     {{ person.firstname }} {{ person.lastname }}
