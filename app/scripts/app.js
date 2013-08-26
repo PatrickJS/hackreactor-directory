@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hackreactorApp', ['ngRoute', 'ngResource', 'ngAnimate'])
+angular.module('hackreactorApp', ['ngRoute', 'ngResource', 'ngAnimate', 'ui.bootstrap'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -10,6 +10,10 @@ angular.module('hackreactorApp', ['ngRoute', 'ngResource', 'ngAnimate'])
       .when('/table', {
         templateUrl: 'views/table.html',
         controller: 'DirectoryCtrl'
+      })
+      .when('/person/:id', {
+        templateUrl: 'views/table.html',
+        controller: 'PersonCtrl'
       })
       .otherwise({
         redirectTo: '/'
