@@ -8,8 +8,7 @@ angular.module('hackreactorApp')
       $scope.searchText = '';
 
       $scope.personUrl = function(person) {
-        var index = $scope.directory.indexOf(person);
-        return '#/person/' + index;
+        return '#/person/' + $scope.directory.indexOf(person);
       };
       $scope.remove = function(person) {
         var index = $scope.directory.indexOf(person);
