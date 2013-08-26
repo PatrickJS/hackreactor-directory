@@ -7,7 +7,7 @@ setup the app
 npm install -g yo
 npm install -g generator-angular
 npm install
-bower update
+bower install
 ```
 run Server
 ```bash
