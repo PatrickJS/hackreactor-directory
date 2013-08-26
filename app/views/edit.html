@@ -1,0 +1,29 @@
+<h1>
+  <img class="avatar" ng-src="{{ gravatar(person.email) }}?s=150" ng-if="person.email">  <input ng-model="person.firstname"> <input ng-model="person.lastname">
+</h1>
+<div>
+  <small>Github:</small>
+  <input ng-model="person.github">
+</div>
+<div>
+  <small>Email:</small>
+  <input ng-model="person.email">
+  <input ng-model="person.email2" ng-if="person.email2">
+</div>
+<div>
+  <small>Phone Number:</small>
+  <input ng-model="person.cellphone">
+</div>
+<div>
+  <small>Blog:</small>
+  <input ng-model="person.blog">
+</div>
+<div>
+  <small>Projects</small>:
+  <input ng-model="person.projectlinks">
+</div>
+<div>
+  <small>Employer</small>: <input ng-model="person.employer">
+</div>
+<button type="button" class="btn btn-success" ng-click="save(person)">Save</button>
+<button type="button" class="btn btn-danger" ng-click="remove(person)">Delete</button>

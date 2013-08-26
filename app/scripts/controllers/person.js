@@ -1,11 +1,13 @@
 'use strict';
 
-angular.module('hackreactorApp')
+hackreactor
   .controller('PersonCtrl', ['$scope', '$routeParams', '$location',
     function($scope, $routeParams, $location) {
-      $scope.person = $scope.directory[$routeParams.id];
+      $scope.person = _.extend({}, $scope.directory[$routeParams.id]);
+
       $scope.save = function(person) {
         console.log('save' + person);
+        $scope.directory[$routeParams.id] = person;
         $location.path('/');
       };
       $scope.gravatar = (function() {

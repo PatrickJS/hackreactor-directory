@@ -3,24 +3,15 @@
 <div ng-repeat="person in directory | filter:searchText"
     class="repeat-item">
     <div style="min-width:300px;">
-      {{ person.firstname }} {{ person.lastname }}
-      <a href="{{ personUrl(person) }}" class="btn btn-xs btn-info">Edit</a>
-      <button class="btn btn-xs btn-danger" ng-click="remove(person)">Delete</button>
+      <h4>
+        <a href="{{ personUrl(person) }}">
+         {{ person.firstname }} {{ person.lastname }}
+       </a>
+       <a href="{{ personEditUrl(person) }}" class="btn btn-xs btn-info">
+        Edit
+       </a>
+      </h4>
+
     </div>
-    <a href="https://github.com/{{ person.github }}" target="_blank">
-      {{ person.github }}
-    </a>
-    <a href="mailto:{{ person.email }}" target="_blank">
-      {{ person.email }}
-    </a>
-    {{ person.email2 }}
-    {{ person.cellphone | phoneNumber }}
-    <a href="{{ person.blog }}">
-      {{ person.blog }}
-    </a>
-    <a href="{{ person.projectlinks }}">
-      {{ person.projectlinks }}
-    </a>
-    {{ person.employer }}
 
 </div>

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hackreactorApp')
+hackreactor
   .animation('.repeat-item', function() {
     return {
       enter : function(element, done) {

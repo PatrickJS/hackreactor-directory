@@ -1,17 +1,22 @@
 'use strict';
 
-angular.module('hackreactorApp')
-  .controller('MainCtrl', ['$scope', '$location',
-    function($scope, $location) {
+hackreactor
+  .controller('MainCtrl', ['$scope', '$location', '$routeParams',
+    function($scope, $location, $routeParams) {
       $scope.directory = window._directoryJSON;
 
       $scope.searchText = '';
 
       $scope.personUrl = function(person) {
-        return '#/person/' + $scope.directory.indexOf(person);
+        var index = ($routeParams.id) ? $routeParams.id : $scope.directory.indexOf(person);
+        return '#/person/' + index;
+      };
+      $scope.personEditUrl = function(person) {
+        var index = ($routeParams.id) ? $routeParams.id : $scope.directory.indexOf(person);
+        return '#/person/edit/' + index;
       };
       $scope.remove = function(person) {
-        var index = $scope.directory.indexOf(person);
+        var index = ($routeParams.id) ? $routeParams.id : $scope.directory.indexOf(person);
         $scope.directory.splice(index, 1);
         $location.path('/');
       };

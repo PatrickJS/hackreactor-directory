@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hackreactorApp')
+hackreactor
   .factory('Directory', function($window) {
     var directory = $window._directoryJSON;
 

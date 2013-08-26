@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hackreactorApp')
+hackreactor
   .directive('directory', function () {
     return {
       template: '<div>{{message}}</div>',

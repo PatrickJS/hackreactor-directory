@@ -7,7 +7,12 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 html, body {
   margin: 30px 10px;
   & a {
-    color: #2874dc;
+    font-weight: 100;
+    color: #fff;
+    &:hover {
+      text-decoration: none;
+      color: #2874dc;
+    }
   }
 }
 .navbar {
@@ -21,6 +26,11 @@ html, body {
 .form-control {
   padding: 20px;
   margin-bottom:  30px;
+}
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 30px;
 }
 body {
   background: #2F3238;

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hackreactorApp')
+hackreactor
   .directive('navbar', function () {
     return {
       restrict: 'E',

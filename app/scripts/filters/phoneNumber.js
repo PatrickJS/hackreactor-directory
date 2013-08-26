@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hackreactorApp')
+hackreactor
   .filter('phoneNumber', function() {
     return function (input) {
       return input.replace('-', '.');
