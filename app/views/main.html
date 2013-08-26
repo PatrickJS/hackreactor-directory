@@ -4,23 +4,24 @@
        ng-model="searchText.$"
        autofocus>
 
-  <div ng-repeat="person in directory | filter:searchText"
-      class="repeat-item">
-      {{ person.firstname }} {{ person.lastname }}
-      <a href="https://github.com/{{ person.github }}" target="_blank">
-        {{ person.github }}
-      </a>
-      <a href="mailto:{{ person.email }}" target="_blank">
-        {{ person.email }}
-      </a>
-      {{ person.email2 }}
-      {{ person.cellphone | phoneNumber }}
-      <a href="{{ person.blog }}">
-        {{ person.blog }}
-      </a>
-      <a href="{{ person.projectlinks }}">
-        {{ person.projectlinks }}
-      </a>
-      {{ person.employer }}
-      <button class="btn btn-mini btn-danger" ng-click="remove(person)">Delete</button>
-  </div>
+<div ng-repeat="person in directory | filter:searchText"
+    class="repeat-item">
+    {{ person.firstname }} {{ person.lastname }}
+    <a href="https://github.com/{{ person.github }}" target="_blank">
+      {{ person.github }}
+    </a>
+    <a href="mailto:{{ person.email }}" target="_blank">
+      {{ person.email }}
+    </a>
+    {{ person.email2 }}
+    {{ person.cellphone | phoneNumber }}
+    <a href="{{ person.blog }}">
+      {{ person.blog }}
+    </a>
+    <a href="{{ person.projectlinks }}">
+      {{ person.projectlinks }}
+    </a>
+    {{ person.employer }}
+    <a href="{{ personUrl(person) }}" class="btn btn-mini btn-info">Edit</a>
+    <button class="btn btn-mini btn-danger" ng-click="remove(person)">Delete</button>
+</div>
