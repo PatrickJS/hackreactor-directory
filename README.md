@@ -4,6 +4,7 @@ Student Directory
 
 setup the app
 ```bash
+gem install compass
 npm install -g yo
 npm install -g generator-angular
 npm install
